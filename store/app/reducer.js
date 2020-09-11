@@ -6,7 +6,7 @@ const initialState = {
   errorMessage: null,
 }
 
-export default function chatReducer(state = initialState, action) {
+export default function appReducer(state = initialState, action) {
   switch (action.type) {
     case SET_ERROR:
       return {

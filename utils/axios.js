@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const apiUrl = ''
+const apiUrl = 'https://jsonplaceholder.typicode.com/'
 const timeout = 1000 * 25
 const baseURL = apiUrl
 const instance = axios.create({

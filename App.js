@@ -5,10 +5,7 @@ import Home from './screens/Home/Home'
 import Projects from './screens/Projects/Projects'
 
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import rootReducer from './store/'
-
-const store = createStore(rootReducer)
+import store from './store/'
 
 //https://reactnavigation.org/docs/hello-react-navigation/
 const Stack = createStackNavigator()
