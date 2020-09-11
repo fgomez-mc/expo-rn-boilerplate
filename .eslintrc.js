@@ -16,5 +16,6 @@ module.exports = {
     ],
     'prettier/prettier': 0,
     'no-unused-vars': ['error', { args: 'after-used' }],
+    'react-hooks/exhaustive-deps': 'warn',
   },
 }

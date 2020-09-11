@@ -6,11 +6,15 @@ import { connect } from 'react-redux'
 import { handleGetProjects } from '../../store/projects/actions'
 import { ScrollView } from 'react-native-gesture-handler'
 
-const Projects = ({projects = [],isLoading = false,getProjects = () => {}}) => {
+const Projects = ({
+  projects = [],
+  isLoading = false,
+  getProjects = () => {},
+}) => {
   const fetchProjects = () => {
     getProjects()
   }
-  useEffect(fetchProjects)
+  useEffect(fetchProjects, [])
 
   return (
     <ScrollView>
