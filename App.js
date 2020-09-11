@@ -4,17 +4,25 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Home from './screens/Home/Home'
 import Projects from './screens/Projects/Projects'
 
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './store/'
+
+const store = createStore(rootReducer)
+
 //https://reactnavigation.org/docs/hello-react-navigation/
 const Stack = createStackNavigator()
 
-const App = () =>  {
+const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Projects" component={Projects} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Projects" component={Projects} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   )
 }
 
