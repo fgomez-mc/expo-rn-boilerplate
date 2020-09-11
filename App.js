@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from './screens/Home/Home'
 import Projects from './screens/Projects/Projects'
+import Scanner from './screens/Scanner/Scanner'
 
 import { Provider } from 'react-redux'
 import store from './store/'
@@ -17,6 +18,7 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Projects" component={Projects} />
+          <Stack.Screen name="Scanner" component={Scanner} />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

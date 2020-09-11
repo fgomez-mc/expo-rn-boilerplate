@@ -5,10 +5,19 @@ import PropTypes from 'prop-types'
 const Home = ({ navigation }) => {
   return (
     <View style={styles.wrapper}>
-      <Button
-        onPress={() => navigation.navigate('Projects')}
-        title="Projects"
-      />
+      <View style={styles.button}>
+        <Button
+          onPress={() => navigation.navigate('Projects')}
+          title="Projects"
+          style={styles.button}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          onPress={() => navigation.navigate('Scanner')}
+          title="Scanner"
+        />
+      </View>
     </View>
   )
 }
@@ -18,6 +27,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  button: {
+    margin: 10,
   },
 })
 
